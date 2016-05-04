@@ -1,0 +1,19 @@
+{
+  "name": "trivialDeployment",
+  "version": "1.0.0",
+  "description": "A basic example of deployment",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/visaudi/trivialDeployment"
+  },
+  "author": "Ben Pardo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/visaudi/trivialDeployment/issues"
+  },
+  "homepage": "https://github.com/visaudi/trivialDeployment"
+}
