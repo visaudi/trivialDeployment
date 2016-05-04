@@ -4,7 +4,7 @@
   "description": "A basic example of deployment",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "mocha test"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/visaudi/trivialDeployment/issues"
   },
-  "homepage": "https://github.com/visaudi/trivialDeployment"
+  "homepage": "https://github.com/visaudi/trivialDeployment",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^2.0.1",
+    "mocha": "^2.4.5"
+  },
+  "dependencies": {
+    "express": "^4.13.4"
+  }
 }
