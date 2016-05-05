@@ -3,28 +3,23 @@ var chaiHttp = require('chai-http');
 
 var should = chai.should();
 
+var app = require('./index.js').app;
+var items = require('./index.js').items;
+chai.use(chaiHttp);
+
 it('should add an item on POST', function(done) {
     chai.request(app)
         .post('/items')
-        .send({'name': 'Kale'})
+        .send({'items': ['Kale']})
         .end(function(err, res) {
             should.equal(err, null);
             res.should.have.status(201);
             res.should.be.json;
-            res.body.should.be.a('object');
-            res.body.should.have.property('name');
-            res.body.should.have.property('id');
-            res.body.name.should.be.a('string');
-            res.body.id.should.be.a('number');
-            res.body.name.should.equal('Kale');
-            storage.items.should.be.a('array');
-            storage.items.should.have.length(1);
-            storage.items[0].should.be.a('object');
-            storage.items[0].should.have.property('id');
-            storage.items[0].should.have.property('name');
-            storage.items[0].id.should.be.a('number');
-            storage.items[0].name.should.be.a('string');
-            storage.items[0].name.should.equal('Kale');
+            res.body.should.be.a('string');
+            res.body.should.equal('Kale');
+            items.should.be.a('array');
+            items.should.have.length(1);
+            items[0].should.be.a('string');
             done();
         });
 });
