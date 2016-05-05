@@ -17,7 +17,7 @@ app.post('/items', jsonParser, function(req, res) {
             console.error("Could not create item");
             return;
         }
-        console.log("Created favorite", item.name);
+        console.log("Created item", item.name);
         res.status(201).json(items[items.length - 1]);
     });
 });
