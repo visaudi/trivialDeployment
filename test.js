@@ -14,7 +14,7 @@ it('should add an item on POST', function(done) {
         .end(function(err, res) {
             should.equal(err, null);
             res.should.have.status(201);
-            res.should.not.be.json;
+            res.should.be.json;
             res.body.should.be.a('string');
             res.body.should.equal('Kale');
             items.should.be.a('array');
