@@ -1,12 +1,15 @@
 language: node_js
 node_js: node
-
 services:
 - mongodb
-
 addons:
   apt:
     sources:
     - mongodb-3.2-precise
     packages:
     - mongodb-org-server
+deploy:
+  provider: heroku
+  app: fathomless-fjord-66829
+  api_key:
+    secure: nAfC2IKRgT3dX9MkDZ9r1Nc6AqWrtI3OZOhmAzifiPrOycKQKsAIlYELMHlAjWEpq6RJb3GbgOb6ZJ5y0O58zev9lCuFajVL/CRzV4rvkGNewg0b5MRWXMXllZ9nwx80LLtisi7yz0rtSG8RlW1ISEALV8FXm0qxFxn1E2QHo1fLQXOllEM/RplQ+Gx6MgZSzWs6pkxKlGK22Mr/x20njGM2asQup42k5y26DzBZiCdlzHQhMx78xF1pOrJnOTukcEEGDl6bBKHY9HYhSXwnu+sSz9FbkUhjc4IlsY0/D3OrExr1oN7AwcnNj8gsXhShyGRRJc7gvxUEC74JD1xSBa7GcTuOWG5xdoeDesDv94Rk9HkS3bKFUBFawxDOtNx84UneoBffZBypU5dEGSVbeKQerzMOS5fTrHgMiMXoe7pFVdEBVnh3s1AywOfvt3R+F6Mb/MHuiXp77vnDxbEjWkNRe17m1rG+Y+ndPJWchjJJLpNqJUkuU8iPRFtwzEldO9RbtvHchQbWmFDlotpCzQaN/BhgZyDQrNhNx7iRLo4cSJWh63ZMyz3ZfQMamWWBLby8KdXUMwh7i/j5CSIWNUdggInteHZbM5Dve+HCkvBY2Xhib4mJp1H+9wfd7+7iE1Lf1BGe99+QVVLgRyvs+WyVs9Tqn9PEfaUfaRHFQkw=
